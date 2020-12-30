@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="Sample" lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sample</title>
+
+        <link rel="stylesheet" type="text/css" href="/sample/css/fonts.css">
+        <link rel="stylesheet" type="text/css" href="/sample/fonts/fontawesome/css/all.css">
+        <link rel="stylesheet" type="text/css" href="/sample/css/main.css">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <header class="navbar-fixed" ng-include="'/sample/views/nav.html'"></header>
+        <div class="container">
+            <main ng-view></main>
+        </div>
+        <div ng-include="'/sample/views/common.html'"></div>
+
+		<script type="text/javascript" src="/sample/js/angular.js"></script>
+		<script type="text/javascript" src="/sample/js/angular-route.js"></script>
+        <script type="text/javascript" src="/sample/materialize/js/bin/materialize.min.js"></script>
+        <script type="text/javascript" src="/sample/js/app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,190 @@
+/*
+SASS COMMAND, IN CURRENT FOLDER :
+sass --watch main.scss:main.css
+*/
+
+@charset "UTF-8";
+
+// 0. Customs
+// ==========================================================================
+
+$disable-color: #bdbdbd;
+$green-color: #4caf50;
+$red-color: #f44336;
+
+$background-color: #fcfcfc;
+$background-color-light: #ffffff;
+$background-color-dark: #303030;
+
+$text-color: rgba(0,0,0,.87);
+$text-color-medium: rgba(0,0,0,.5);
+$text-color-light: rgba(0,0,0,.12);
+
+$text-color-dark: rgba(255,255,255,.87);
+$text-color-dark-medium: rgba(255,255,255,.5);
+$text-color-dark-light: rgba(255,255,255,.12);
+
+
+// 1. Colors
+// ==========================================================================
+
+$primary-color: #ffffff;
+$primary-color-light: #ffffff;
+$primary-color-dark: #cccccc;
+
+$secondary-color: #26a69a;
+
+
+// Colors
+@import "../materialize/sass/components/color-variables";
+@import "../materialize/sass/components/color-classes";
+
+// Variables
+@import "../materialize/sass/components/variables";
+
+// Reset
+@import "../materialize/sass/components/normalize";
+
+// components
+@import "../materialize/sass/components/global";
+@import "../materialize/sass/components/badges";
+@import "../materialize/sass/components/icons-material-design";
+@import "../materialize/sass/components/grid";
+@import "../materialize/sass/components/navbar";
+@import "../materialize/sass/components/typography";
+@import "../materialize/sass/components/transitions";
+@import "../materialize/sass/components/cards";
+@import "../materialize/sass/components/toast";
+@import "../materialize/sass/components/tabs";
+@import "../materialize/sass/components/tooltip";
+@import "../materialize/sass/components/buttons";
+@import "../materialize/sass/components/dropdown";
+@import "../materialize/sass/components/waves";
+@import "../materialize/sass/components/modal";
+@import "../materialize/sass/components/collapsible";
+@import "../materialize/sass/components/chips";
+@import "../materialize/sass/components/materialbox";
+@import "../materialize/sass/components/forms/forms";
+@import "../materialize/sass/components/table_of_contents";
+@import "../materialize/sass/components/sidenav";
+@import "../materialize/sass/components/preloader";
+@import "../materialize/sass/components/slider";
+@import "../materialize/sass/components/carousel";
+@import "../materialize/sass/components/tapTarget";
+@import "../materialize/sass/components/pulse";
+@import "../materialize/sass/components/datepicker";
+@import "../materialize/sass/components/timepicker";
+
+// Custom CSS
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	margin: 0;
+	background-color: #fcfcfc;
+	background-color: var(--background-color, #fcfcfc);
+}
+
+input, a {
+	color: #26a69a;
+	color: var(--secondary-color, #26a69a);
+}
+
+header {
+	height: 56px!important;
+
+	nav {
+		background-color: #ffffff;
+		background-color: var(--primary-color, #ffffff);
+		color: inherit;
+		box-shadow: none;
+		border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+		&, &.nav-wrapper {
+			min-height: 56px!important;
+			height: 56px!important;
+			line-height: 56px!important;
+		}
+
+		ul a, .brand-logo {
+			color: inherit;
+		}
+
+		.brand-logo {
+			height: 36px;
+			width: auto;
+			margin: 10px 0;
+			left: inherit;
+			transform: inherit;
+			display: none;
+		}
+	}
+
+	.container {
+		margin-top: inherit;
+		padding: 0 14px;
+	}
+}
+
+.container {
+	position: relative;
+	margin-top: 56px;
+	height: calc(100% - 112px /* Header height + Container margin-top */);
+
+	.page-informations {
+		margin-bottom: 56px;
+
+		.page-title, .page-title-bg, .page-subtitle {
+			margin: 0;
+			text-transform: uppercase;
+			letter-spacing: -2px;
+		}
+
+		.page-title {
+			font-size: 36px;
+			font-weight: 700;
+		}
+
+		.page-title-bg {
+			font-size: 800px;
+			line-height: 800px;
+			font-weight: 800;
+			color: rgba(0, 0, 0, 0.05);
+			position: fixed;
+			bottom: -150px;
+			left: 100px;
+			z-index: -1;
+		}
+
+		.page-subtitle {
+			font-size: 28px;
+			font-weight: 300;
+		}
+	}
+}
+
+.toast-container {
+	top: initial;
+	right: initial;
+	left: initial;
+	bottom: 0;
+	max-width: 300px;
+	margin: 16px 32px;
+
+	.toast {
+		line-height: 1.1rem;
+	}
+}
+
+#home {}
+
+#items {}
+
+#item {}
+
+@media only screen and (max-width: 600px) {
+	.toast-container {
+		min-width: calc(100% - 64px);
+		bottom: 0%;
+	}
+}

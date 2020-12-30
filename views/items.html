@@ -1,0 +1,18 @@
+<section id="items">
+    <div class="page-informations">
+        <div class="page-title-bg">{{page.title}}</div>
+        <h1 class="page-title">{{page.title}}</h1>
+        <h2 class="page-subtitle">{{page.subtitle}}</h2>
+    </div>
+
+    <ul class="collection">
+        <li class="collection-item" ng-repeat="item in items">
+            <div>
+                {{item.name}}
+                <a ng-href="#/item/{{item.id}}" class="secondary-content">
+                    <i class="material-icons">remove_red_eye</i>
+                </a>
+            </div>
+        </li>
+    </ul>
+</section>
